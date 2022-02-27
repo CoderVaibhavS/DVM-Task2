@@ -13,46 +13,46 @@ document.querySelector('#submit').addEventListener('click', function () {
     q_rec = document.querySelector('#received').value;
     q_dem = document.querySelector('#demanded').value;
 
-    // if((!name || !id || !no)) {
-    //     alert('Please enter all the credentials')
-    //     return;
-    // }
-    // if(!name.match(/[a-z | \s]/i) || name.match(/^ /)) {
-    //      document.querySelector('#invalid-1').style.display = 'block';
-    //     return;
-    // }
-    // else{
-    //     document.querySelector('#invalid-1').style.display = 'none'
-    // }
-    // if(!id.match(/202[0-1][A|B][1-7][P|H][S][0-9]{4}[P]/i)) {
-    //     document.querySelector('#invalid-2').style.display = 'block';
-    //     return;
-    // }
-    // else{
-    //     document.querySelector('#invalid-2').style.display = 'none'
-    // }
-    // if(!no.match(/[0-9]{10}/)) {
-    //     document.querySelector('#invalid-3').style.display = 'block';
-    //     return;
-    // }
-    // else{
-    //     document.querySelector('#invalid-3').style.display = 'none'
-    // }
-    // if(!exp_date || !rec_date || !q_dem || !q_rec || !q_ret) {
-    //     alert('Please fill out all the fields')
-    //     return;
-    // }
-    // else if(rec_date < exp_date) {
-    //     alert('Received date cannot be less than expected delivery date. Please enter valid received date.');
-    //     return;
-    // }
-    // else if(q_rec > q_dem) {
-    //     alert('Received quantity cannot be more than the demanded quantity. Please enter the correct received amount.');
-    //     return;
-    // }
-    // else if(Number(q_rec) + Number(q_ret) != q_dem) {
-    //     alert('Returned quantity is incorrect. Please enter the correct value.')
-    // }
+    if((!name || !id || !no)) {
+        alert('Please enter all the credentials')
+        return;
+    }
+    if(!name.match(/[a-z | \s]/i) || name.match(/^ /)) {
+         document.querySelector('#invalid-1').style.display = 'block';
+        return;
+    }
+    else{
+        document.querySelector('#invalid-1').style.display = 'none'
+    }
+    if(!id.match(/202[0-1][A|B][1-7][P|H][S][0-9]{4}[P]/i)) {
+        document.querySelector('#invalid-2').style.display = 'block';
+        return;
+    }
+    else{
+        document.querySelector('#invalid-2').style.display = 'none'
+    }
+    if(!no.match(/[0-9]{10}/)) {
+        document.querySelector('#invalid-3').style.display = 'block';
+        return;
+    }
+    else{
+        document.querySelector('#invalid-3').style.display = 'none'
+    }
+    if(!exp_date || !rec_date || !q_dem || !q_rec || !q_ret) {
+        alert('Please fill out all the fields')
+        return;
+    }
+    else if(rec_date < exp_date) {
+        alert('Received date cannot be less than expected delivery date. Please enter valid received date.');
+        return;
+    }
+    else if(q_rec > q_dem) {
+        alert('Received quantity cannot be more than the demanded quantity. Please enter the correct received amount.');
+        return;
+    }
+    else if(Number(q_rec) + Number(q_ret) != q_dem) {
+        alert('Returned quantity is incorrect. Please enter the correct value.')
+    }
 
     document.querySelector('.records').style.display = 'block'
     document.querySelector('.records').outerHTML += `
